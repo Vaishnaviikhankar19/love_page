@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I'm Sorry & I Love You</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 50px;
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+
+    .photo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .snack {
+      text-align: center;
+    }
+
+    .snack-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 15px;
+      border: 3px solid white;
+      box-shadow: 0 0 15px #fff;
+      margin: 10px;
+    }
+
+    .main-img {
+      width: 250px;
+      height: auto;
+      border-radius: 20px;
+      border: 5px solid white;
+      box-shadow: 0px 0px 20px #fff;
+    }
+
+    .heart {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+      background-size: contain;
+      animation: float 10s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 I Love You So Much 💖</h1>
+  <h2>😔 I'm Really Sorry, Baby 😔</h2>
+
+  <div class="photo-container">
+    <!-- Laddu Left -->
+    <div class="snack">
+      <div>🍥 My Laddu</div>
+      <img class="snack-img" src="laddu.jpeg" alt="Laddu" />
+    </div>
+
+    <!-- Couple Photo -->
+    <img class="main-img" src="sanvi.jpeg" alt="Our Photo" />
+
+    <!-- Sonpapdi Right -->
+    <div class="snack">
+      <div>🍬 My Sonpapdi</div>
+      <img class="snack-img" src="sonpapdi.jpeg" alt="Sonpapdi" />
+    </div>
+  </div>
+
+  <!-- Floating Hearts -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      let heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 5 + 5) + "s";
+      document.body.appendChild(heart);
+    }
+  </script>
+
+</body>
+</html>
